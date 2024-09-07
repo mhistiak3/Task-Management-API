@@ -1,9 +1,10 @@
-export const TokenEncode=async(req,res)=>{
+ const TokenEncode=async(req,res)=>{
 
 
 }
 
-export const TokenDecode=async(req,res)=>{
+ const TokenDecode=async(req,res)=>{
 
 
 }
+module.exports = {TokenDecode, TokenEncode}
