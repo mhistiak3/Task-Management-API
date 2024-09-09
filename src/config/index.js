@@ -8,6 +8,13 @@ const {
   REQUEST_NUMBER,
   WEB_CACHE,
   DATABASE,
+  JWT_KEY,
+  JWT_EXPIRE_TIME,
+  EMAIL_HOST,
+  EMAIL_PORT,
+  EMAIL_SECURITY,
+  EMAIL_USER,
+  EMAIL_PASS,
 } = process.env;
 
 module.exports = {
@@ -18,5 +25,12 @@ module.exports = {
   REQUEST_NUMBER,
   WEB_CACHE,
   DATABASE,
+  JWT_KEY,
+  JWT_EXPIRE_TIME, //30*24*60*60
+  EMAIL_HOST,
+  EMAIL_PORT,
+  EMAIL_SECURITY,
+  EMAIL_USER,
+  EMAIL_PASS,
 };
 
