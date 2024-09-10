@@ -15,10 +15,10 @@ router.post("/CodeVerify", UsersController.CodeVerify);
 router.post("/ResetPassword", UsersController.ResetPassword);
 
 // Task Routes
-router.post("/CreateTask", TaskController.CreateTask);
-router.get("/UpdateTaskStatus", TaskController.UpdateTaskStatus);
-router.get("/TaskListByStatus", TaskController.TaskListByStatus);
-router.get("/DeleteTask", TaskController.DeleteTask);
-router.get("/CountTask", TaskController.CountTask);
+router.post("/CreateTask",AuthMiddleware, TaskController.CreateTask);
+router.put("/UpdateTaskStatus/:id/:status",AuthMiddleware, TaskController.UpdateTaskStatus);
+router.get("/TaskListByStatus/:status",AuthMiddleware, TaskController.TaskListByStatus);
+router.delete("/DeleteTask/:id",AuthMiddleware, TaskController.DeleteTask);
+router.get("/CountTask", AuthMiddleware,TaskController.CountTask);
 
 module.exports = router;
