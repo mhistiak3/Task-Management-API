@@ -7,6 +7,7 @@ const {
   EMAIL_PASS,
 } = require("../config");
 const SendEmail = async (EmailTo, EmailText, EmailSubject) => {
+  await nodemailer.createTestAccount();
   let transporter = nodemailer.createTransport({
     host: EMAIL_HOST,
     port: EMAIL_PORT,
@@ -17,7 +18,7 @@ const SendEmail = async (EmailTo, EmailText, EmailSubject) => {
   });
 
   let mailOptions = {
-    from: "Task manager MERN <allan.gutmann4@ethereal.email>",
+    from: "Task manager MERN <carlo.leffler@ethereal.email>",
     to: EmailTo,
     subject: EmailSubject,
     text: EmailText,
