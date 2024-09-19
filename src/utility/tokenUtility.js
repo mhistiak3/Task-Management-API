@@ -5,7 +5,6 @@ const TokenEncode = (email, user_id) => {
   const KEY = JWT_KEY;
   const EXPIRE = { expiresIn: JWT_EXPIRE_TIME };
   const PAYLOAD = { email: email, user_id: user_id };
-  console.log(KEY, EXPIRE, PAYLOAD);
   const token = jwt.sign(PAYLOAD, KEY, EXPIRE);
  
   
